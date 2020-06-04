@@ -7,10 +7,6 @@ metadata:
   name: qotd
 spec:
   ports:
-  - name: 5000-tcp
-    port: 5000
-    protocol: TCP
-    targetPort: 5000
   - name: 80-tcp
     port: 80
     protocol: TCP
@@ -18,4 +14,4 @@ spec:
   selector:
     app: qotd
   sessionAffinity: None
-  type: NodePort
+  type: ClusterIP
