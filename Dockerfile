@@ -4,8 +4,9 @@ FROM registry.access.redhat.com/ubi8/dotnet-31
 ADD app /opt/app-root
 
 RUN dotnet build /opt/app-root
-RUN rm /opt/app-root/.nuget
+
+#RUN chown -R default:root /tmp/NuGetScratch/
 
 EXPOSE 5000
 
-CMD dotnet run --project /opt/app-root
+CMD dotnet run --no-build --project /opt/app-root
