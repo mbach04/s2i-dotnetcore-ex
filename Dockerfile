@@ -7,4 +7,4 @@ RUN dotnet build /opt/app-root
 
 EXPOSE 5000
 
-CMD ["dotnet", "run", "--project", "/opt/app-root"]
+CMD dotnet run --project /opt/app-root
