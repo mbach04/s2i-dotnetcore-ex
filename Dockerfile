@@ -4,6 +4,7 @@ FROM registry.access.redhat.com/ubi8/dotnet-31
 ADD app /opt/app-root
 
 RUN dotnet build /opt/app-root
+RUN rm /opt/app-root/.nuget
 
 EXPOSE 5000
 
